@@ -19,9 +19,13 @@ const rl = readline.createInterface({
  * const currentDate = new Date();
  * const currentYear = currentDate.getFullYear();
  * */
+
+const currentDate = new Date();
+const currentYear = currentDate.getFullYear();
+
 function greet(name, address, birthday) {
   
-    console.log("Hello, " + name + "! Looks like you're " + (2021 - birthday) + " years old, and you lived in " + address + "!");
+    console.log("Hello, " + name + "! Looks like you're " + (currentYear - birthday) + " years old, and you lived in " + address + "!");
 }
 
 // DON'T CHANGE
