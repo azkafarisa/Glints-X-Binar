@@ -26,18 +26,20 @@ function createArray() {
 /*
  * Code Here!
  * */
-console.log(`BEFORE`);
-console.log(data);
 
 
 //=====clean data v1=====
 // function clean(data) {
+//   console.log(`BEFORE`);
+//   console.log(data);
 //   console.log(`AFTER`);
 //   console.log(data.filter(el => el != null));
 // }
 
 //=====clean data v2=====
 function clean(data) {
+  console.log(`BEFORE`);
+  console.log(data);
   console.log(`AFTER`);
   console.log(data.filter(i => typeof i === 'number'));
 }
@@ -55,7 +57,7 @@ if (process.argv.slice(2)[0] == "test") {
     })
   }
   catch(err) {
-    //console.error(err.message);
+   // console.error(err.message);
   }
 }
   
