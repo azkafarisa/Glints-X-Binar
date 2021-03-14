@@ -26,13 +26,20 @@ function createArray() {
 /*
  * Code Here!
  * */
+console.log(`BEFORE`);
 console.log(data);
 
-function clean(data) {
-  // Code here
 
-  let filtered = data.filter(el => el != null);
-  console.log(filtered);
+//=====clean data v1=====
+// function clean(data) {
+//   console.log(`AFTER`);
+//   console.log(data.filter(el => el != null));
+// }
+
+//=====clean data v2=====
+function clean(data) {
+  console.log(`AFTER`);
+  console.log(data.filter(i => typeof i === 'number'));
 }
 
 /*
@@ -43,12 +50,12 @@ if (process.argv.slice(2)[0] == "test") {
   try {
     clean(data).forEach(i => {
       if (i == null) {
-        throw new Error("Array still contains null")
+        throw new Error("Array still contains null");
       }
     })
   }
   catch(err) {
-    console.error(err.message);
+    //console.error(err.message);
   }
 }
   
