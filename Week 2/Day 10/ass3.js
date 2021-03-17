@@ -7,7 +7,7 @@ const randomNumber = Math.floor(Math.random() * 100);
 
 function createArray() {
     for (let i = 0; i < randomNumber; i++) {
-      data.push(createArrayElement())
+      data.push(createArrayElement());
     }
   
     // Recursive
@@ -19,10 +19,10 @@ function createArray() {
   function createArrayElement() {
     let random = Math.floor(Math.random() * 1000);
   
-    return [null, random][Math.floor(Math.random() * 2)]
+    return [null, random][Math.floor(Math.random() * 2)];
   }
   
-  createArray()
+  createArray();
 /*
  * Code Here!
  * */
@@ -37,11 +37,12 @@ function createArray() {
 // }
 
 //=====clean data v2=====
-function clean(data) {
+function clean() {
   console.log(`BEFORE`);
   console.log(data);
   console.log(`AFTER`);
   console.log(data.filter(i => typeof i === 'number'));
+  //return data.filter(i => typeof i === 'number');
 }
 
 /*
@@ -50,14 +51,16 @@ function clean(data) {
 
 if (process.argv.slice(2)[0] == "test") {
   try {
-    clean(data).forEach(i => {
+    clean().forEach(i => {
       if (i == null) {
         throw new Error("Array still contains null");
       }
     })
+    // clean().forEach(element => {console.log(element)
+    // });
   }
   catch(err) {
-   // console.error(err.message);
+    console.error(err.message);
   }
 }
   
